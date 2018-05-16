@@ -1,0 +1,156 @@
+<!--index.wxml-->
+<view class="page">
+	<view class="page_head">
+		<view class="top_nav">
+			<view class="channel">
+				<image  class="icon_nav" src="/images/channel.png"></image>
+				<view class="text_channel">频道</view>
+			</view>
+			<input type='text' value="搜索康康药品/器械/成人用品" class="search_box"></input>
+		</view>
+		<swiper indicator-dots="true" autoplay="true" interval="1500" duration="500">
+			<block wx:for="{{TopImgList}}">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image"/>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+
+	<view class="page_nav">
+		<view class="item_nav" wx:for="{{navList}}">
+			<image class="item_img" src="{{item.img}}"></image>
+			<view class="item_name">{{item.name}}</view>
+		</view>
+	</view>
+
+	<view class="page_discount">
+		<view class="instruction_text">[特惠]全场满39元包邮。</view>
+		<view class="time_shop">
+			<image class="skill_logo"src="/images/skill-logo.png"></image>
+			<view class="nine_time">21点场</view>
+			<view class="item_time">00</view>
+			<view class="colon">:</view>
+			<view class="item_time">00</view>
+			<view class="colon">:</view>
+			<view class="item_time">00</view>
+			<view class="kill_health">
+				<view class="kill_health_item">1元秒健康 ></view>
+			</view>
+		</view>
+		<scroll-view scroll-x bindscroll="scroll" scroll-left="0" class="scro_view">
+			<view class="scrol_xview">
+				<view class="srocl_item" wx:for="{{scroList}}">
+					<image src="{{item.img}}" class="goods_name"></image>
+					<view class="discount_price">{{item.dis_price}}</view>
+					<view class="pre_price">{{item.pre_price}}</view>
+				</view>
+			</view>
+		</scroll-view>	
+	</view>
+
+	<view class="page_quick">
+		<image class="img_newuser" src="/images/newuser.jpg"></image>
+
+		<view class="quick_right">
+			<image class="img_ppweek" src="/images/ppweek.jpg"></image>
+			<image class="img_jfsc" src="/images/jfsc.jpg"></image>
+		</view>
+	</view>
+
+	<view class="page_guid">
+		<image class="img_guid" src="/images/guid.jpg"></image>
+	</view>
+
+	<view class="page_collage">
+		<view class="collage_top">
+			<text class="text_collage">精品拼团</text>
+			<text class="text_group">GROUP</text>
+			<text class="jiantou">></text>
+		</view>
+
+		<scroll-view scroll-x="true" bindscroll="scroll" scroll-left="0">
+			<view class="scroll_content">
+				<view class="scroll_item" wx:for="{{collageList}}">
+					<image src="{{item.img}}" class="img_puzzle"></image>
+					<view class="scroll_foot">
+						<text class="text_introduce">{{item.introduce}}</text>
+						<view class="scroll_bottom">
+							<text class="text_dor">￥</text>
+							<text class="text_price">39.9</text>
+							<text class="text_amount">/2件</text>
+							<text class="text_sale">已售100860</text>
+							<view class="scroll_bottom_r">
+								<view class="text_three_group">3人团</view>
+								<view class="text_go_group">去开团</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</scroll-view>	
+	</view>
+
+	<view class="page_hot_depart">
+		<view class="depart_top">
+			<text class="text_depart">热门科室</text>
+			<text class="text_hot">HOT</text>
+		</view>
+
+		<view class="img_top">
+			<image src="/images/hootroom1.jpg" class="img_hootroom img_left"></image>
+			<image src="/images/hootroom2.jpg" class="img_hootroom"></image>
+		</view>
+
+		<view class="img_bottom">
+			<image src="/images/hootroom3.jpg" class="img_hootroom_b img_left"></image>
+			<image src="/images/hootroom4.jpg" class="img_hootroom_b"></image>
+			<image src="/images/hootroom5.jpg" class="img_hootroom_b img_left"></image>
+			<image src="/images/hootroom6.jpg" class="img_hootroom_b"></image>
+			<image src="/images/hootroom7.jpg" class="img_hootroom_b img_left"></image>
+			<image src="/images/hootroom8.jpg" class="img_hootroom_b"></image>
+		</view>
+
+	</view>
+
+	<view class="page_guid">
+		<image class="img_guid" src="/images/guid.jpg"></image>
+	</view>
+
+	<view class="page_health">
+		<view class="health_top">
+			<text class="text_health">健康精选</text>
+			<text class="text_focus">FOCUS</text>
+		</view>
+
+		<view class="health_bottom">
+			<image src="/images/health1.jpg" class="img_health"></image>
+			<image src="/images/health2.jpg" class="img_health"></image>
+			<image src="/images/health3.jpg" class="img_health"></image>
+		</view>
+	</view>
+
+	<view class="page_guid">
+		<image class="img_guid" src="/images/guid.jpg"></image>
+	</view>
+
+	<view class="page_guess"> 
+		<view class="guess_top">
+			<view class="text_guess">猜你喜欢</view>
+			<view class="line_through"></view>
+		</view>
+
+		<view class="guess_bottom">
+			<view class="guess_item" wx:for="{{goodsList}}">
+				<image src="{{item.img}}" class="img_likepro"></image>
+				<view class="goods_intro">{{item.intro}}</view>
+				<view class="goods_bottom">
+					<text class="dis_price">{{item.dis}}</text>
+					<text class="pre1_price">{{item.pre}}</text>
+				</view>
+			</view>
+		</view>
+		
+	</view>
+
+</view>		
